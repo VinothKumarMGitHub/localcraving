@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="imagecontainer">
+    <img class="fooditems.headerimage" src="assets/food.jpg" />
+    <div class="textFontBig">
+      {{ objRestaurants.name }} ({{ objRestaurants.address }} )
+    </div>
+    <div class="textFontBold">
+      $0.49 Delivery Fee •Delivered in 20 to 30 min
+    </div>
+  </div>
+  <br />
+  <div class="textFontSmall blackColor">
+    {{ objRestaurants.neighborhood }} - {{ objRestaurants.cuisine_type }}
+  </div>
+
+  <br />
+
+  <div *ngFor="let item of foodItems" class="foodmenuCard">
+    <div class="textFontBig">
+      {{ item.name }}
+    </div>
+    <mat-grid-list cols="4" rowHeight="250px" gutterSize="5px">
+      <mat-grid-tile *ngFor="let menu of item.menuitems">
+        <mat-card class="foodcard" (click) ="onOpenDialog(menu)" >
+          <mat-card-content>
+            <div class="fooditem-card-name">{{ menu.name }}</div>
+            <div class="fooditem-card-content">
+              {{ menu.description }}
+            </div>
+            <div class="fooditem-card-price">${{ menu.subitems[0].price }}</div>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+</div>
+

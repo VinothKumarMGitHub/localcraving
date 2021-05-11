@@ -1,0 +1,69 @@
+
+.imagecontainer {
+  position: relative;
+  text-align: center;
+  height: 200px;
+  overflow: hidden;
+  background-color: black;
+}
+
+img {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.imagecontainer .textFontBig {
+  position: absolute;
+  bottom: 50px;
+  left: 16px;
+  color: white;
+}
+
+.imagecontainer .textFontBold {
+  position: absolute;
+  bottom: 15px;
+  left: 16px;
+  color: white;
+}
+
+.foodmenuCard {
+  cursor: pointer;
+  position: relative;
+}
+
+.eclips {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.foodcard {
+  width: 280px;
+  height: 100px;
+}
+.fooditem-card-name {
+  font-weight: bold;
+  font-size: 16px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.fooditem-card-content {
+  font-size: 13px;
+  min-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.fooditem-card-price {
+    color: darkgreen;
+    font-size: 15px;
+}

@@ -1,0 +1,53 @@
+.info-card {
+  transition: none !important;
+  box-shadow: none !important;
+  padding: 10px !important;
+  cursor: pointer;
+}
+
+.info-card-img {
+  margin-bottom: 1px !important;
+}
+
+.info-card-name {
+  width: 90%;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.info-card-ratings {
+  border-radius: 2px 7px;
+  border-color: black;
+  border-width: 1px;
+  // background: #73ad21;
+  background: lightgray;
+  padding: 2px;
+  width: 20px;
+  height: 15px;
+  font-style: bold;
+  font-size: 12px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  display: inline-block;
+}
+
+.info-card-deliveryCost {
+  display: inline-block;
+}
+
+.info-card-deliveryTime {
+  display: inline-block;
+  color: grey;
+}
+
+.vertical-space {
+  border-left: 30px solid white;
+  display: inline-block;
+}

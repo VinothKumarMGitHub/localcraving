@@ -1,0 +1,68 @@
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar-titleleft {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.toolbar-titleright {
+  font-size: 22px;
+  font-weight: bold;
+  color: dodgerblue;
+}
+
+.vertical-space {
+  border-left: 7px solid white;
+  display: inline-block;
+}
+
+.toolbar-search {
+  width: 400px;
+  top: 10px;
+  color: grey;
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+}
+
+.toolbar-cart {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px 7px;
+  border-color: lightgrey;
+}
+
+.toolbar-location {
+  width: 200px;
+  top: 5px;
+  font-size: 13px;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+.toolbar-toggle {
+  height: 30px !important;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.mat-button-toggle-group {
+  height: 32px;
+  align-items: center;
+  border-style: none;
+}
+
+.toobar-text{
+    width: 90%;
+}
+.toobar-icon {
+    top: 10px;
+}
+
+mat-toolbar{
+    background-color: white;
+}

@@ -1,0 +1,14 @@
+<mat-card class="info-card">
+  <img class="info-card-img" mat-card-image src="assets/{{ objInfoCard.photograph }}" />
+  <mat-card-content>
+    <div class="info-card-name">{{ objInfoCard.name }}</div>
+    <div class="info-card-ratings"> {{ getRatings(objInfoCard.rating) }} </div>
+    <div class="info-card-deliveryCost">
+      $1.5 Delivery Fee
+    </div>
+    <div class="vertical-space"></div>
+    <div class="info-card-deliveryTime">
+      . 10-20 min
+    </div>
+  </mat-card-content>
+</mat-card>

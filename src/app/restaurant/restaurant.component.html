@@ -1,0 +1,16 @@
+<div class="container">
+  
+
+  <div class="filterbuttons">
+      <button mat-button  *ngFor="let item of filterButtons">
+        <img class="filter-img" mat-card-image src="assets/{{ item.image }}" (click)="onFilterButtonClick(item)" />
+        <span >{{ item.name }} </span> 
+      </button>
+  </div>
+
+  <mat-grid-list cols="4" rowHeight="250px" gutterSize="5px">
+    <mat-grid-tile *ngFor="let item of restaurants | restaurantFilter:filterargs">
+      <info-card [data]="item" (click) = "onRestaurantsClick(item)"> </info-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

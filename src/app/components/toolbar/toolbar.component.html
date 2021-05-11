@@ -1,0 +1,55 @@
+<mat-toolbar>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span class="toolbar-titleleft">Local</span>
+  <div class="vertical-space"></div>
+  <span class="toolbar-titleright">Craving</span>
+
+  <span class="toolbar-spacer"></span>
+
+  <div class="toolbar-toggle">
+    <section>
+      <mat-button-toggle-group aria-label="Font Style">
+        <mat-button-toggle value="bold">Delivery</mat-button-toggle>
+        <mat-button-toggle value="italic">Pickup</mat-button-toggle>
+      </mat-button-toggle-group>
+    </section>
+  </div>
+  <div class="vertical-space"></div>
+  <div class="vertical-space"></div>
+
+    <mat-icon class="toobar-icon">location_on</mat-icon>
+    <mat-form-field class="toolbar-location">
+      <mat-chip-list>
+        <mat-chip >6686 Green RiverDr .Now</mat-chip>
+      </mat-chip-list>
+    </mat-form-field>
+
+  <div class="vertical-space"></div>
+  <div class="vertical-space"></div>
+
+  <div class="toolbar-search">
+    <mat-icon matPrefix class="toobar-icon">search</mat-icon>
+    <input matInput placeholder="What are you craving?" class="toobar-text" />
+  </div>
+  <div class="vertical-space"></div>
+
+  <div class="toolbar-cart">
+    <button mat-icon-button (click)="onCheckoutClick()">
+      {{ getCartItemsCount() }}
+      <mat-icon matPrefix>shopping_cart</mat-icon>
+    </button>
+  </div>
+
+  <div class="vertical-space"></div>
+
+  <button mat-button (click)="logout()">
+  <img style="width: 30px;height: 30px;" class="btn btn-danger" src="assets/signout.jpg">
+</button>
+</mat-toolbar>

@@ -1,0 +1,124 @@
+<div class="container">
+  <mat-grid-list cols="2">
+    <!-- left panal -->
+    <mat-grid-tile>
+      <div class="checkout-costestimation backcolor-white">
+        <div class="textFontBold">{{ getDeliveryLocation() }}</div>
+
+        <br />
+        <hr class="solid" />
+        <div class="d-table w-100">
+          <div class="d-table-cell">Delivery estimate</div>
+          <div class="d-table-cell tar">30 - 40 mins</div>
+        </div>
+
+        <hr class="solid" />
+
+        <div class="d-table w-100" *ngFor="let item of getCart()">
+          <div class="d-table-cell h-30">{{ item.data.name }}</div>
+          <div class="d-table-cell tar h-30">
+            {{ item.itemsCount }}
+          </div>
+        </div>
+
+        <br />
+        <hr class="solid" />
+      </div>
+    </mat-grid-tile>
+
+    <!-- right side panel  -->
+    <mat-grid-tile>
+      <div class="checkout-costestimation">
+        <button
+          mat-button
+          color="green"
+          style="width: 100%"
+          (click)="onPurchase()"
+        >
+          Place order
+        </button>
+        <br />
+        <div class="checkout-paragraph">
+          If you’re not around when the delivery person arrives, they’ll leave
+          your order at the door. By placing your order, you agree to take full
+          responsibility for it once it’s delivered.
+        </div>
+
+        <hr class="solid" />
+
+        <div class="d-table w-100" *ngFor="let item of getCostSplit()">
+          <div class="d-table-cell h-30">{{ item[0] }}</div>
+          <div class="d-table-cell tar h-30">${{ item[1].toFixed(2) }}</div>
+        </div>
+
+        <!-- <mat-grid-list cols="2" rowHeight="30px" gutterSize="5px">
+          <div *ngFor="let item of getCostSplit()">
+            <mat-grid-tile class="checkout-leftgrid">
+              {{ item[0] }}
+            </mat-grid-tile>
+            <mat-grid-tile class="checkout-rightgrid">
+              ${{ item[1].toFixed(2) }}
+            </mat-grid-tile>
+          </div>
+        </mat-grid-list> -->
+
+        <hr class="solid" />
+
+        <br />
+        <!-- <mat-grid-list cols="2" rowHeight="30px" gutterSize="5px">
+          <mat-grid-tile class="checkout-leftgrid textFontBold">
+            Add Tips
+          </mat-grid-tile>
+          <mat-grid-tile class="checkout-rightgrid textFontBold">
+            ${{ getTip().toFixed(2) }}
+          </mat-grid-tile>
+        </mat-grid-list> -->
+
+        <div class="d-table w-100">
+          <div class="d-table-cell textFontBold h-30">Add Tips</div>
+          <div class="d-table-cell tar textFontBold h-30">
+            ${{ getTip().toFixed(2) }}
+          </div>
+        </div>
+
+        <div class="checkout-paragraph">
+          Delivery people are critical to our communities at this time. Add a
+          tip to say thanks.
+        </div>
+        <div>
+          <mat-chip-list class="example-chip">
+            <mat-chip
+              class="example-box"
+              (click)="onTipClick(tip)"
+              *ngFor="let tip of tipsList; let index = index"
+              [value]="tipPercentage"
+              [selected]="tip == tipPercentage"
+            >
+              {{ tip }}%
+            </mat-chip>
+          </mat-chip-list>
+        </div>
+
+        <br />
+
+        <div class="d-table w-100">
+          <div class="d-table-cell textFontBold h-30">Total</div>
+          <div class="d-table-cell tar textFontBold h-30">
+            ${{ getTotal().toFixed(2) }}
+          </div>
+        </div>
+
+        <hr class="solid" />
+
+        <button
+          mat-button
+          color="green"
+          style="width: 100%"
+          (click)="onPurchase()"
+        >
+          Place order
+        </button>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

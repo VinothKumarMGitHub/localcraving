@@ -1,0 +1,29 @@
+mat-grid-tile {
+  min-width: 100px;
+}
+
+.filterbuttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.filterbuttons .mat-button-base {
+  flex-direction: column;
+}
+
+.mat-button-base span{
+    display: flex;
+    line-height: 0px;
+ }
+
+
+.filter-img {
+  height: 60px;
+  width: 60px;
+}
+
+

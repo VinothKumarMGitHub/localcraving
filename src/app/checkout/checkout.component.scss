@@ -1,0 +1,66 @@
+.checkout-costestimation {
+  background-color: #f1f0f0;
+  flex-direction: column !important;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  padding-top: 100px;
+}
+
+.mat-button.mat-green {
+  background-color: RGBA(5, 146, 78, 0.9);
+  color: white;
+  font-weight: bold;
+}
+
+.checkout-paragraph {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 11px;
+}
+
+hr.solid {
+  border-top: 1px solid rgb(95, 93, 93);
+}
+
+.checkout-gridRow{
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.checkout-leftgrid{
+    text-align: left;
+}
+
+.checkout-rightgrid{
+    text-align: right;
+}
+
+ 
+  .d-table {
+    display:table;
+  }
+  
+  .d-table-cell {
+    display:table-cell;
+  }
+  
+  .w-100 {
+    width: 100%;
+  }
+
+  .h-30{
+    padding-top: 5px;
+    padding-bottom: 5px;;
+  }
+  
+  .tar {
+    text-align: right;
+  }
+
+ 
+  .backcolor-white{
+      background-color: white;
+  }
