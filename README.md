@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Steps to run the code
 1. Clone repo from `git clone https://github.com/VinothKumarMGitHub/localcraving.git`
 2. Change directory to `cd localcraving`
-3. Change to master branch - `git checkout master`
+3. Change to master branch - `git checkout develop`
 4. `npm i` - Which will install all node modules which required for this project
 5. `ng build` - to build and generate build files 
 6. `ng serve` = to host in local server
